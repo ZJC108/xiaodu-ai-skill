@@ -1,0 +1,24 @@
+{
+  "name": "xiaodu-ai-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "将小度智能音箱（XD-SDA12-2301 等）通过 DuerOS 自定义技能接入任意 OpenAI 兼容大模型",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test:sign": "tsx scripts/test-signature.ts"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

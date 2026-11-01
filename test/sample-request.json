@@ -1,0 +1,35 @@
+{
+  "version": "2.0",
+  "session": {
+    "new": true,
+    "sessionId": "test-session-001",
+    "attributes": {}
+  },
+  "context": {
+    "System": {
+      "user": { "userId": "TESTUSER123" },
+      "application": { "applicationId": "your-application-id" },
+      "device": { "deviceId": "XD-SDA12-2301-TEST" }
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "test-request-001",
+    "timestamp": "1700000000",
+    "query": {
+      "type": "TEXT",
+      "original": "用一句话给我讲讲什么是大模型",
+      "rewritten": "用一句话给我讲讲什么是大模型"
+    },
+    "dialogState": "STARTED",
+    "determined": false,
+    "intents": [
+      {
+        "name": "ai.dueros.common.default_intent",
+        "score": 100,
+        "confirmationStatus": "NONE",
+        "slots": {}
+      }
+    ]
+  }
+}
