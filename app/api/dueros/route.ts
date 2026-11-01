@@ -7,6 +7,11 @@ import type { DuerOSRequest, ChatMessage, SkillSessionAttributes } from '../../.
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+// 健康检查探活：平台默认用 GET 探 /api/dueros，返回 200 即可，不影响小度 POST 请求
+export async function GET() {
+  return new NextResponse('ok', { status: 200 });
+}
+
 const MAX_HISTORY = 20; // 双向各保留最近 20 条，避免超出 24KB 响应上限
 
 const WELCOME = '已接入新的 AI 模型，有什么可以帮你？';
