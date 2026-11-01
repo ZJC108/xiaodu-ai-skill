@@ -1,0 +1,20 @@
+# Render Blueprint：在 Render 内 "New" → "Blueprint" 一键部署本仓库
+# 部署后到 Environment 里补全 LLM_BASE_URL / LLM_API_KEY / LLM_MODEL 三个变量
+services:
+  - type: web
+    name: xiaodu-ai-skill
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/dueros
+    envVars:
+      - key: LLM_BASE_URL
+        sync: false
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        sync: false
+      - key: DEBUG_SKIP_SIGNATURE
+        value: "0"
